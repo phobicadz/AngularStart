@@ -84,3 +84,6 @@ C:\Users\adam.chamberlain\Documents\Visual Studio 2012\Projects\AngularStart1\An
 C:\Users\adam.chamberlain\Documents\Visual Studio 2012\Projects\AngularStart1\AngularStart1\bin\OMG.ContactManagement.pdb
 C:\Users\adam.chamberlain\Documents\Visual Studio 2012\Projects\AngularStart1\AngularStart1\obj\Debug\AngularStart1.dll
 C:\Users\adam.chamberlain\Documents\Visual Studio 2012\Projects\AngularStart1\AngularStart1\obj\Debug\AngularStart1.pdb
+C:\Users\Adam\Documents\GitHub\AngularStart\AngularStart1\obj\Debug\AngularStart1.csprojResolveAssemblyReference.cache
+C:\Users\Adam\Documents\GitHub\AngularStart\AngularStart1\obj\Debug\AngularStart1.dll
+C:\Users\Adam\Documents\GitHub\AngularStart\AngularStart1\obj\Debug\AngularStart1.pdb

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <title>OMG Angular</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Luckiest+Guy|Nothing+You+Could+Do|Titillium+Web' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="//js.live.net/v5.0/wl.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body data-ng-app="main" data-ng-controller="RootController">
+    <div id="ajaxBusy">
+        <p>
+            <img src="Images/loading.gif">
+        </p>
+    </div>
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">OMG Admin</a>
+                </div>
+                <div class="navbar-collapse collapse" style="height: 0px;">
+                    <ul class="nav navbar-nav">
+                         <li class="dropdown">
+                            <a href="#/home" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Home <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#/demo">Demo</a></li>
+                                <li><a href="#/contact">Contact</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#/transaction">Query</a></li>
+                            </ul>
+                        </li>
+                        <li data-ng-class="{active : activeViewPath==='/demo'}"><a href="#/demo">Demo</a></li>
+                        <li data-ng-class="{active : activeViewPath==='/transaction'}"><a href="#/transaction">Query</a></li>
+                        <li data-ng-class="{active : activeViewPath==='/angular'}"><a href='#/angular'>Learn Angular</a></li>
+                        <li data-ng-class="{active : activeViewPath==='/about'}"><a href='#/about'>About</a></li>
+                        <li data-ng-class="{active : activeViewPath==='/contact'}"><a href='#/contact'>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/app")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

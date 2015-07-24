@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+OMG.Refer.Configuration
+</name>
+</assembly>
+<members>
+<member name="P:My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:OMG.Refer.Configuration.ReferralServerReader.GetCurrent">
+	<summary>
+ Returns a referral server instance which represents the current computer system.
+ </summary>
+</member><member name="M:OMG.Refer.Configuration.ReferralServerReader.GetServer(System.String)">
+	<summary>
+ Returns a referral server instance which represents the requested machine name
+ </summary>
+</member>
+</members>
+</doc>

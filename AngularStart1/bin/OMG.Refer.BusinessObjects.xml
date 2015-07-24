@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+OMG.Refer.BusinessObjects
+</name>
+</assembly>
+<members>
+<member name="M:OMG.Refer.Contingency.ContingencyGateway.EnterContingencyMode(OMG.Refer.ReferralServer,OMG.Refer.Implementation)">
+	<summary>
+ Informs the system that the provided request handler should begin operating
+ in contingency mode until further notice
+ </summary>
+</member><member name="M:OMG.Refer.Contingency.ContingencyGateway.LeaveContingencyMode(OMG.Refer.ReferralServer,OMG.Refer.Implementation)">
+	<summary>
+ Informs the system that the provided request handler should no longer operate
+ in contingency mode and should return to normal operation
+ </summary>
+</member><member name="M:OMG.Refer.Contingency.ContingencyGateway.QueueRequest(OMG.Refer.ReferralServer,OMG.Refer.Contingency.ContingentRequest)">
+	<summary>
+ Creates a new request and appends it to the contingent storage queue
+ </summary>
+</member><member name="M:OMG.Refer.Contingency.ContingencyGateway.RemoveRequest(OMG.Refer.Contingency.PendingContingentRequest)">
+	<summary>
+ Removes a specific request from the designated contingent storage location
+ </summary>
+</member><member name="M:OMG.Refer.Contingency.ContingencyGateway.GetPendingRequests(OMG.Refer.ReferralServer)">
+	<summary>
+ Retrieves a collection of all the current pending requests at the designated contingent storage location
+ </summary>
+</member><member name="T:OMG.Refer.Contingency.ContingencyGateway">
+	<summary>
+ Provides access to all the required logic for managing contingent operations of the referral system
+ </summary>
+</member><member name="P:My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:OMG.Refer.ResourceGateway.GetAll">
+	<summary>
+ Gets a list of all resources using a shallow load by not populating the items within each object
+ </summary>
+</member>
+</members>
+</doc>

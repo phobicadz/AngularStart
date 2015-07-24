@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<h2>Transaction Query</h2>
+
+    <!-- Modal Popup demo start, note that it uses a different controller to the one defined in app.js -->
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Transaction Details</h3>
+        </div>
+        <div class="modal-body">  
+           
+            <b>{{ selected.item }}</b>          
+         
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+    <!-- Modal Popup demo end -->
+
+
+<div class="grid-style" data-ng-grid="transactionGrid" >
+    </div>
+<br />
+
+<input type="number" id="TransactionId" data-ng-model="TransactionId" max="99999" class="input" />&nbsp;
+<input type="button" class="btn" value="Query" data-ng-click="SearchTransactionClick()"><br /><br />
+
+ <button class="btn btn-default" data-ng-click="open()">Open me!</button>
+
+{{ transaction.name }} <br />
+{{ transaction.companyName }} <br />
+{{ transaction.referenceNo }} <br />
+{{ transaction.queryCreatedDate | date:'dd/MM/yyyy' }} <br />
+{{ transaction.notes }}
+
+

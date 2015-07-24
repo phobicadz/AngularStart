@@ -1,0 +1,87 @@
+﻿@{
+    Layout = null;
+}
+<h2>Users</h2>
+<div>
+    <alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    <button class='btn btn-default' data-ng-click="addAlert()">Add Alert</button>
+
+    <!-- Modal Popup demo start, note that it uses a different controller to the one defined in app.js -->
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Modal Popup</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a ng-click="selected.item = item">{{ item.firstName }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item.firstName }} {{ selected.item.lastName }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+    <!-- Modal Popup demo end -->
+
+    <button class="btn btn-default" data-ng-click="open()">Open me!</button>
+    <button class="btn btn-default" data-ng-click="open('lg')">Large modal</button>
+    <button class="btn btn-default" data-ng-click="open('sm')">Small modal</button>
+    <div data-ng-show="selected">
+        Selection from a modal: {{ selected.firstName }} {{ selected.lastName }} 
+        Tel:{{ selected.mobile }}
+    </div>
+
+ 
+
+    <input type="text" data-ng-model="filterOptions.filterText" />
+    Uppercased: {{ filterOptions.filterText | uppercase }}
+    <div class="grid-style" data-ng-grid="userGrid">
+    </div>
+    <div class="user-details" data-ng-show="selectedUser">
+        <div class="well">
+            <h3>User Details</h3>
+            <form>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" data-ng-model="selectedUser.firstName" />
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" data-ng-model="selectedUser.lastName" />
+                <label for="gender">Gender</label>
+                <input type="radio" id="male" name="gender" data-ng-checked="!selectedUser.gender" /><span class="gender-text">Male</span>
+                <input type="radio" id="female" name="gender" data-ng-checked="selectedUser.gender" /><span class="gender-text">Female</span><br />
+                <br />
+                <label for="mobile">Mobile</label>
+                <input type="tel" id="mobile" name="mobile" data-ng-model="selectedUser.mobile" />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" data-ng-model="selectedUser.email" />
+                <label for="country">Country</label>
+                <select id="country" name="country" data-ng-model="selectedUser.country" data-ng-options="c.id as c.name for c in countryList"></select>
+                <label for="state">State</label>
+                <select id="state" name="state" data-ng-model="selectedUser.state" data-ng-change="clearCityAndZip();" data-ng-options="s.id as s.name for s in countryList[0].states"></select>
+                <label for="city">City</label>
+                <select id="city" name="city" data-ng-model="selectedUser.city" data-ng-options="c.id as c.name for c in selectedState.cities">
+                    <option value="" selected="selected">Select City</option>
+                </select>
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" data-ng-model="selectedUser.zip" /><br />
+                <input type="button" id="btnSubmit" class="btn" data-ng-click="updateUser(selectedUser)" value="UPDATE" />
+            </form>
+        </div>
+    </div>
+
+      <!-- Carousel -->
+    <div style="height: 305px">
+    <carousel interval="myInterval">
+      <slide data-ng-repeat="slide in slides" active="slide.active">
+        <img data-ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{$index}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </slide>
+    </carousel>
+    </div>
+    <!-- End Carousel -->
+</div>

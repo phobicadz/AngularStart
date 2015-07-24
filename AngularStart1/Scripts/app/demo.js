@@ -18,7 +18,7 @@ appRoot.controller('DemoController', function ($scope, $location, $resource, $mo
     $scope.selectedUsers = [0];
     $scope.filterOptions = [];
     $scope.alerts = [
-    { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
+    { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again. It''s broke' },
     { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
     ];
 

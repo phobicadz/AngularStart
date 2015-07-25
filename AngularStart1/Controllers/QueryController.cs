@@ -14,18 +14,18 @@ namespace AngularStart1.Controllers
         public TransactionQuery Get(int transactionId)
         {
 
-            TransactionQuery query;
+            TransactionQuery query = new TransactionQuery();
 
-            query = Omg.CustomerSupport.TransactionGateway.Instance.GetByTransactionID("en", transactionId);
+      //      query = Omg.CustomerSupport.TransactionGateway.Instance.GetByTransactionID("en", transactionId);
 
-            return query;
+            return  query;
         }
 
         public IEnumerable<TransactionQuery> Get(string name)
         {
 
-            List<TransactionQuery> queries = (List<TransactionQuery>)Omg.CustomerSupport.TransactionGateway.Instance.GetByParametersAffiliate(2622, "", "", "", "", null, null);
-
+            //    List<TransactionQuery> queries = (List<TransactionQuery>)Omg.CustomerSupport.TransactionGateway.Instance.GetByParametersAffiliate(2622, "", "", "", "", null, null);
+            List<TransactionQuery> queries = new List<TransactionQuery>();
             return queries;
         }
 
@@ -45,4 +45,7 @@ namespace AngularStart1.Controllers
         {
         }
     }
+
+    public class TransactionQuery
+    { }
 }

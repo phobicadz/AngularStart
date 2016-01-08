@@ -16,10 +16,10 @@ namespace AngularStart1.Controllers
 
             TransactionQuery query = new TransactionQuery();
 
-      //      query = Omg.CustomerSupport.TransactionGateway.Instance.GetByTransactionID("en", transactionId);
+      //      query = Omg.CustomerSupport.TransactionGateway.Instance.GetByTransactionID("en", transactionId);..
 
             return  query;
-        }
+        }  
 
         public IEnumerable<TransactionQuery> Get(string name)
         {

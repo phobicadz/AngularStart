@@ -16,7 +16,7 @@ namespace AngularStart1.Controllers
 
             TransactionQuery query = new TransactionQuery();
             query.Description = "Spanner Monkey";
-            query.Name = "Dave";
+            query.Name = "Dave Chandalor";
             query.Telephone = "07734439905";
             query.Postcode = "NR1 4AR";
             

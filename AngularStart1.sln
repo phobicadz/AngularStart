@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F0E246
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularStart1", "AngularStart1\AngularStart1.csproj", "{9B8BF380-7F42-4F02-8107-2C03CA88527C}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CustomerSupport", "..\..\..\..\..\TFS\CodeProjects\LibraryProjects\CustomerSupport\CustomerSupport.vbproj", "{2ADD542B-6A00-400D-992B-5CECABBD2A7E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,10 +22,6 @@ Global
 		{9B8BF380-7F42-4F02-8107-2C03CA88527C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B8BF380-7F42-4F02-8107-2C03CA88527C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B8BF380-7F42-4F02-8107-2C03CA88527C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2ADD542B-6A00-400D-992B-5CECABBD2A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2ADD542B-6A00-400D-992B-5CECABBD2A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2ADD542B-6A00-400D-992B-5CECABBD2A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2ADD542B-6A00-400D-992B-5CECABBD2A7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

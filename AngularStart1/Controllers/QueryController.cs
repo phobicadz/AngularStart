@@ -19,6 +19,7 @@ namespace AngularStart1.Controllers
             query.Name = "Dave Chandalor";
             query.Telephone = "07734439905";
             query.Postcode = "NR1 4AR";
+            query.DOB = DateTime.Parse("03/06/2015");
             
 
      // query = Omg.CustomerSupport.TransactionGateway.Instance.GetByTransactionID("en", transactionId);..
@@ -57,6 +58,7 @@ namespace AngularStart1.Controllers
         private String name;
         private String telephone;
         private String postcode;
+        private DateTime dob;
     public string Description
             {
                 get
@@ -104,6 +106,18 @@ namespace AngularStart1.Controllers
             set
             {
                 postcode = value;
+            }
+        }
+
+        public DateTime DOB
+        {
+            get
+            {
+                return dob;
+            }
+            set
+            {
+                dob = value;
             }
         }
 

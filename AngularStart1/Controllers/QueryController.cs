@@ -18,9 +18,10 @@ namespace AngularStart1.Controllers
 
             query.Description = "Spanner Monkey";
             query.Name = "Dave";
+            query.Telephone = "07734439905";
             
 
-      //      query = Omg.CustomerSupport.TransactionGateway.Instance.GetByTransactionID("en", transactionId);..
+     // query = Omg.CustomerSupport.TransactionGateway.Instance.GetByTransactionID("en", transactionId);..
 
             return  query;
         }  
@@ -54,6 +55,7 @@ namespace AngularStart1.Controllers
     {
         private String description;
         private String name;
+        private String telephone;
     public string Description
             {
                 get
@@ -79,5 +81,20 @@ namespace AngularStart1.Controllers
                 name = value;
             }
     }
+
+    public string Telephone
+        {
+            get
+            {
+                return telephone;
+            }
+            set
+            {
+                telephone = value;
+            }
+        }
+
+
+
     }
 }

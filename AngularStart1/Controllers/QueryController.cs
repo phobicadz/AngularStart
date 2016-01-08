@@ -16,6 +16,9 @@ namespace AngularStart1.Controllers
 
             TransactionQuery query = new TransactionQuery();
 
+            query.Description = "Spanner Monkey";
+            
+
       //      query = Omg.CustomerSupport.TransactionGateway.Instance.GetByTransactionID("en", transactionId);..
 
             return  query;
@@ -47,5 +50,19 @@ namespace AngularStart1.Controllers
     }
 
     public class TransactionQuery
-    { }
+    {
+        private String description;
+    public string Description
+            {
+                get
+                {
+                    return description;
+                }
+
+                set
+                {
+                    description = value;
+                }
+            }
+        }
 }

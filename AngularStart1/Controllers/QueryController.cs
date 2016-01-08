@@ -19,6 +19,7 @@ namespace AngularStart1.Controllers
             query.Description = "Spanner Monkey";
             query.Name = "Dave";
             query.Telephone = "07734439905";
+            query.Postcode = "NR1 4AR";
             
 
      // query = Omg.CustomerSupport.TransactionGateway.Instance.GetByTransactionID("en", transactionId);..
@@ -56,6 +57,7 @@ namespace AngularStart1.Controllers
         private String description;
         private String name;
         private String telephone;
+        private String postcode;
     public string Description
             {
                 get
@@ -91,6 +93,18 @@ namespace AngularStart1.Controllers
             set
             {
                 telephone = value;
+            }
+        }
+
+    public string Postcode
+        {
+            get
+            {
+                return postcode;
+            }
+            set
+            {
+                postcode = value;
             }
         }
 

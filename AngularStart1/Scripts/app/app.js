@@ -20,4 +20,33 @@ appRoot
         });
     }]);
 
+// directive changes child of "mywidget" red on click 
+appRoot.directive("myWidget", function() {
+    var linkFunction = function(scope, element, attributes) {
+        var paragraph = element.children()[0];
+        $(paragraph).on("click", function() {
+            $(this).css({ "background-color": "red" });
 
+        });
+    };
+
+    return {
+        restrict: "E",
+        link: linkFunction
+    };
+});
+
+// directive repeats contents within.
+appRoot.directive("repeatWidget", function() {
+
+    return {
+        restrict: "E",
+        compile: function(tElement, attrs) {
+            var content = tElement.children();
+            for (var i = 1; i < attrs.repeat; i++) {
+                tElement.append(content.clone());
+            }
+        }
+    }
+
+});

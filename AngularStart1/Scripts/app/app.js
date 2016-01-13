@@ -24,6 +24,7 @@ appRoot
 appRoot.directive("myWidget", function() {
     var linkFunction = function(scope, element, attributes) {
         var paragraph = element.children()[0];
+        // use a bit of jquery to change colour to red
         $(paragraph).on("click", function() {
             $(this).css({ "background-color": "red" });
 
